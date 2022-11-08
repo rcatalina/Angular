@@ -1,4 +1,6 @@
 {
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
@@ -6,33 +8,39 @@
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:4200/",
-      "sourceMaps": true,
-      "runtimeArgs": ["--remote-debugging-port=4200"],
-      "webRoot": "${workspaceFolder}/my-app",
       "preLaunchTask": "npm: start",
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/my-app/**",
-        "!**/node_modules/**"
-      ]
+      "url": "http://localhost:4200/#",
+      "webRoot": "${workspaceFolder}",
+      // "runtimeArgs": ["--remote-debugging-port=4200"],
+      // "sourceMapPathOverrides": {
+      //   "webpack:/*": "${webRoot}/*",
+      //   "/./*": "${webRoot}/*",
+      //   "/src/*": "${webRoot}/*",
+      //   "/*": "*",
+      //   "/./~/*": "${webRoot}/node_modules/*"
+      // }
     },
     {
       "name": "ng test",
       "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html",
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/my-app/**",
-        "!**/node_modules/**"
-      ]
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/*",
+        "/*": "*",
+        "/./~/*": "${webRoot}/node_modules/*"
+      }
+    },
+    {
+      "name": "ng e2e",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
+      "args": ["${workspaceFolder}/e2e/protractor.conf.js"]
     }
   ]
 }
-
-// "resolveSourceMapLocations": [
-//   "${workspaceFolder}/**",
-//   "!**/node_modules/**"
-// ],
-
-// "outFiles": ["${workspaceFolder}/**/*.js", "!**/node_modules/**"],

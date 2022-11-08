@@ -1,0 +1,11 @@
+<div class="timerContainer">
+  {{ minutes | number: "2.0-0" }}&nbsp;:&nbsp;{{ seconds | number: "2.0-0" }}
+</div>
+
+<button mat-button (click)="isPaused ? resume() : pause()">
+  {{ isPaused ? buttonLabelResume : buttonLabelPause }}
+</button>
+<button mat-button (click)="reset()">
+  {{ buttonLabelReset }}
+</button>
+

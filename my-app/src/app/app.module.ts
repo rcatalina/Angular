@@ -11,19 +11,23 @@ import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { ListaPedidosComponent } from './lista-pedidos/lista-pedidos.component';
 import { PedidoComponent } from './lista-pedidos/pedido/pedido.component';
+import { TimerComponent } from './components/timer/timer.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     ListaPedidosComponent,
-    PedidoComponent
+    PedidoComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatListModule
+    MatListModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

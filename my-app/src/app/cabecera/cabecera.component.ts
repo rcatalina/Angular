@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cabecera.component.html',
   styleUrls: ['./cabecera.component.css'],
 })
+
+
 export class CabeceraComponent implements OnInit {
   title: string = 'Gestión de pedidos';
   msg: string | undefined;

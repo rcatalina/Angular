@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+//para que el servicio sea singleton y se comparta
 @Injectable({
   providedIn: 'root',
 })
