@@ -1,0 +1,12 @@
+<h1>Componente: CabeceraComponent</h1>
+
+<h2>Atributos:</h2>
+<mat-list dense>
+  <mat-list-item>Title:&nbsp;{{ title }}</mat-list-item>
+</mat-list>
+
+<button mat-button (click)="onClickAdd()">Añadir pedido</button>
+
+<ng-container *ngIf="msg">
+  <p>{{ msg }}</p>
+</ng-container>
