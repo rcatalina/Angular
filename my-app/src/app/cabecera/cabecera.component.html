@@ -6,7 +6,31 @@
 </mat-list>
 
 <button mat-button (click)="onClickAdd()">Añadir pedido</button>
+<button mat-button (click)="onClickFindAll()">Todos los pedidos</button>
 
 <ng-container *ngIf="msg">
   <p>{{ msg }}</p>
+</ng-container>
+
+<ng-container *ngIf="pedidos">
+  <div *ngFor="let pedido of pedidos">
+    <ul>
+      Id:
+      {{
+        pedido.id
+      }}
+    </ul>
+    <ul>
+      Desc:
+      {{
+        pedido.desc
+      }}
+    </ul>
+    <ul>
+      Fecha:
+      {{
+        pedido.fechaPedido
+      }}
+    </ul>
+  </div>
 </ng-container>
